@@ -1,5 +1,6 @@
 import Image from "next/image";
 import College from "@/assets/images/Rectangle 7.png";
+import { MdOutlineSegment } from "react-icons/md";
 
 interface College {
   name: string;
@@ -53,8 +54,8 @@ const colleges: College[] = [
   },
 ];
 
-const CollegeCard = ({ college }: { college: College }) => (
-  <div className="rounded-lg shadow-md min-w-[380px] p-2 border border-blue-400">
+const CollegeAllCard = ({ college }: { college: College }) => (
+  <div className="rounded-lg shadow-md lg:w-[356px] p-2 border border-blue-400">
     <div className="relative h-40">
       <Image
         src={college.image}
@@ -111,14 +112,21 @@ const CollegeCard = ({ college }: { college: College }) => (
 );
 
 const HRManagementColleges = () => (
-  <div className=" px-4 py-8">
-    <h1 className="text-3xl font-bold mb-6">
-      Top colleges in India for{" "}
-      <span className="text-blue-500">HR Management</span>
-    </h1>
-    <div className="flex gap-6 overflow-x-auto hide-scrollbar">
+  <div className="container mx-auto py-5">
+    <div className="mb-5 flex gap-5">
+      <input
+        type="text"
+        className="p-3 border border-gray-400 w-full rounded-lg"
+        placeholder="Search a college name"
+      />
+      <button className="flex items-center border border-gray-400 p-3 gap-4 w-[165px] justify-center rounded-lg">
+        <MdOutlineSegment />
+        <span className="">Sort</span>
+      </button>
+    </div>
+    <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-5 gap-3">
       {colleges.map((college, index) => (
-        <CollegeCard key={index} college={college} />
+        <CollegeAllCard key={index} college={college} />
       ))}
     </div>
   </div>
