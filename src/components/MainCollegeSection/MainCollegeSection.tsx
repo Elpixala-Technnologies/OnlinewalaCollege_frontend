@@ -1,7 +1,7 @@
 import React from "react";
 import CollegeFilter from "./CollegeFilter/CollegeFilter";
-import CollegeAllCard from "@/components/MainCollegeSection/CollegeAllCard/CollegeAllCard";
 import PopularCollegeCard from "../CollegeCard/PopularCollegeCard";
+import CollegeMain from "./CollegeAllCard/CollegeMain";
 
 function MainCollegeSection() {
   return (
@@ -10,7 +10,7 @@ function MainCollegeSection() {
         <CollegeFilter />
       </div>
       <div className="md:w-[80%]">
-        <CollegeAllCard />
+        <CollegeMain />
         <PopularCollegeCard />
       </div>
     </div>

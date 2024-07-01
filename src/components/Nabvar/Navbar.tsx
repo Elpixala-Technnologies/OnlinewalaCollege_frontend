@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Profile from "@/assets/images/Profile.png";
 import India from "@/assets/images/India.png";
 import AuthModal from "../AuthUi/AuthModal/AuthModal";
@@ -9,6 +10,7 @@ import AuthModal from "../AuthUi/AuthModal/AuthModal";
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -18,16 +20,23 @@ function Navbar() {
     setIsAuthModalOpen(!isAuthModalOpen);
   };
 
+  const getLinkClassName = (href: any) => {
+    const baseClasses =
+      "block lg:inline-block px-2 py-[7px] rounded xl:text-[18px]";
+    const activeClasses = "bg-blue-600 text-white";
+    return `${baseClasses} ${pathname === href ? activeClasses : ""}`;
+  };
+
   return (
     <>
       <div className="h-[102px] shadow-lg px-4 xl:px-12 flex justify-between items-center relative">
-        <div>
+        <Link href={"/"}>
           <h1 className="text-2xl xl:text-3xl">
             <span className="text-blue-400 font-extrabold">Online</span>
             <span className="text-blue-400 font-extralight">wala</span>
             <span className="text-blue-400 font-extrabold">college</span>
           </h1>
-        </div>
+        </Link>
 
         {/* Hamburger menu for mobile and tablets */}
         <button className="lg:hidden" onClick={toggleMenu}>
@@ -53,33 +62,25 @@ function Navbar() {
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           } lg:translate-x-0`}
         >
-          <div className="p-4 lg:p-0">
-            <button className="bg-blue-400 xl:p-2 xl:text-[18px] rounded-md text-white w-full lg:w-auto">
-              Explore colleges
-            </button>
-          </div>
+          <Link href="/colleges" className={getLinkClassName("/colleges")}>
+            Explore Colleges
+          </Link>
           <Link
             href="/top-universities"
-            className="block lg:inline-block p-4 lg:p-0 xl:text-[18px]"
+            className={getLinkClassName("/top-universities")}
           >
             Top universities
           </Link>
-          <Link
-            href="/programs"
-            className="block lg:inline-block p-4 lg:p-0 xl:text-[18px]"
-          >
-            Program
+          <Link href="/programs" className={getLinkClassName("/programs")}>
+            Programs
           </Link>
           <Link
             href="/latest-news"
-            className="block lg:inline-block p-4 lg:p-0 xl:text-[18px]"
+            className={getLinkClassName("/latest-news")}
           >
             Latest News
           </Link>
-          <Link
-            href="/more"
-            className="block lg:inline-block p-4 lg:p-0 xl:text-[18px]"
-          >
+          <Link href="/more" className={getLinkClassName("/more")}>
             More
           </Link>
         </div>

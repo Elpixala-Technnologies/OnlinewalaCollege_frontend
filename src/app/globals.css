@@ -31,3 +31,7 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(209, 209, 200, 0.897) transparent;
 }
+
+.topRounded {
+  border-top-right-radius: 15px;
+}
