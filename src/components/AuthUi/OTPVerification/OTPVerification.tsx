@@ -81,7 +81,7 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({ phoneNumber }) => {
               Confirm OTP
             </button>
             <p className="mt-4 text-center">
-              Didn't receive the OTP?{" "}
+              {`Didn't receive the OTP? `}
               <button className="text-blue-500 hover:underline">Resend</button>
             </p>
           </div>
