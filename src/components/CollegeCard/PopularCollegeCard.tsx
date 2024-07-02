@@ -43,7 +43,7 @@ const PopularCollegeCard: React.FC = () => {
     <div className="bg-blue-400 h-[364px] flex flex-col items-center relative p-4">
       <div className="flex justify-between items-start w-full px-4 my-4">
         <h1 className="sm:text-2xl font-bold text-white">
-          Popular colleges providing online bachelor's degrees
+          {`Popular colleges providing online bachelor's degrees`}
         </h1>
         <div className="text-2xl font-bold text-white flex justify-between items-center gap-6">
           <button>
