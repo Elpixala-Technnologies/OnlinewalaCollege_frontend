@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(209, 209, 200, 0.897);
+  border-radius: 50%;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(209, 209, 200, 0.897) transparent;
+}
+
+.topRounded {
+  border-top-right-radius: 15px;
+}
