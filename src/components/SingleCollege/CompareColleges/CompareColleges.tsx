@@ -5,7 +5,6 @@ import CollegeComparison from "./CollegeComparison";
 import CollegeImage from "@/assets/images/CollegeImage.png";
 import CollegeImage2 from "@/assets/images/Rectangle 745.png";
 import AmityLogo from "@/assets/images/CollegeImage.png";
-import News from "../Overview/NewsSection/News";
 
 function CompareColleges() {
   const allColleges = [
@@ -87,7 +86,7 @@ function CompareColleges() {
 
   return (
     <>
-      <div className="bg-white p-4 mb-5 rounded-lg shadow-md">
+      <div className="bg-white p-4 mb-5 rounded-lg">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-semibold">
             Compare Popular Colleges With Manipal University Online
@@ -138,7 +137,6 @@ function CompareColleges() {
         </p>
         <CollegeComparison colleges={colleges} />
       </div>
-      <News />
     </>
   );
 }

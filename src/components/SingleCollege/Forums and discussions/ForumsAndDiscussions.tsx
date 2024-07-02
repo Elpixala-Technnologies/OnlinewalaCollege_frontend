@@ -37,7 +37,7 @@ function ForumsAndDiscussions() {
   ]);
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4">
+    <div className="bg-white rounded-lg  p-4">
       <h1 className="text-2xl font-bold mb-4">
         Ask your questions on Manipal University Online, Jaipur
       </h1>
