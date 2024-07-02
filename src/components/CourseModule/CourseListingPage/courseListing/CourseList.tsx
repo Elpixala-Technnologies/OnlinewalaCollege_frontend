@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Course {
   id: number;
   title: string;
@@ -38,9 +40,11 @@ export default function CourseList() {
       {courses.map((course: any, index: any) => (
         <div key={index} className="rounded-lg mb-5">
           <div className="border p-4 rounded-t-lg bg-white border-blue-300">
-            <h2 className="text-xl font-medium text-gray-900">
-              {course.title}
-            </h2>
+            <Link href={`/programs/${course.title}`}>
+              <h2 className="text-xl font-medium text-gray-900">
+                {course.title}
+              </h2>
+            </Link>
             <div className="flex justify-between mt-2">
               <div className="md:w-[45%] w-full grid grid-cols-2">
                 <p className="text-blue-500">{course.reviews} ★</p>

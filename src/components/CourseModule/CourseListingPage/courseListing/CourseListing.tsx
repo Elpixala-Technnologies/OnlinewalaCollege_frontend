@@ -6,6 +6,8 @@ import SearchBar from "./SearchBar";
 import CourseList from "./CourseList";
 import CallToAction from "./CallToAction";
 import PopularCollegeCard from "@/components/CollegeCard/PopularCollegeCard";
+import NewsArticles from "./NewsArticles";
+import TopCourse from "./TopCourse/TopCourse";
 
 export default function CourseListing() {
   const [filters, setFilters] = useState({
@@ -24,14 +26,24 @@ export default function CourseListing() {
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-14 mt-5">
-        <div className="w-full md:w-[20%]">
+        {/* left side */}
+        <div className="w-full md:w-[20%] md:block hidden">
           <FilterSection filters={filters} setFilters={setFilters} />
         </div>
+
+        {/* right side */}
         <div className="w-full md:w-[80%]">
           <CourseList />
           <CallToAction />
           <div className="mt-5">
             <PopularCollegeCard />
+          </div>
+          <hr />
+          <div className="mt-40">
+            <NewsArticles />
+          </div>
+          <div>
+            <TopCourse />
           </div>
         </div>
       </div>
