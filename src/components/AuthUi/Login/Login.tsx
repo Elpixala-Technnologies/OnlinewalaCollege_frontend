@@ -48,7 +48,7 @@ const Login: React.FC<LoginProps> = ({ setAuthStep, setPhoneNumber }) => {
             <div className="mt-14">
               <h1 className="text-[22px] font-medium">Continue with mobile </h1>
               <p className="text-gray-600 text-xs font-medium">
-                You'll receive a 4 digit code to verify next
+                {`You'll receive a 4 digit code to verify next`}
               </p>
             </div>
             <form onSubmit={handleSubmit}>

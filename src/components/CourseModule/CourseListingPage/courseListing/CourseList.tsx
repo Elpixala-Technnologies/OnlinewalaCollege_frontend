@@ -35,12 +35,9 @@ const courses: Course[] = [
 export default function CourseList() {
   return (
     <div className="">
-      {courses.map((course) => (
-        <div className="rounded-lg mb-5">
-          <div
-            key={course.id}
-            className="border p-4 rounded-t-lg bg-white border-blue-300"
-          >
+      {courses.map((course: any, index: any) => (
+        <div key={index} className="rounded-lg mb-5">
+          <div className="border p-4 rounded-t-lg bg-white border-blue-300">
             <h2 className="text-xl font-medium text-gray-900">
               {course.title}
             </h2>
