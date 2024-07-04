@@ -13,6 +13,7 @@ import NewsAndUpdates from "./NewsAndUpdates/NewsAndUpdates";
 import ForumsAndDiscussions from "./ForumsAndDiscussions/ForumsAndDiscussions";
 import NavigationTabs from "@/components/ReusableComponent/NavigationTabs/NavigationTabs";
 import TabContent from "@/components/ReusableComponent/NavigationTabs/TabContent";
+import Scholarship from "./Scholarship/Scholarship";
 
 type Tab = {
   label: string;
@@ -26,6 +27,7 @@ const SingleCoursePage = () => {
     { label: "Curriculum", component: Curriculum },
     { label: "Eligibility", component: Eligibility },
     { label: "Fee Structure", component: FeeStructure },
+    { label: "Scholarship", component: Scholarship },
     { label: "Rating & reviews", component: RatingAndReviews },
     { label: "Facilities and staff", component: Facilities },
     { label: "Placement", component: Placement },
