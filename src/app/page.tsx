@@ -1,9 +1,10 @@
+import HomePageMain from "@/components/HomePageModule/HomePageMain";
 import React from "react";
 
 function page() {
   return (
     <>
-      <h1>this is home page</h1>
+      <HomePageMain />
     </>
   );
 }
