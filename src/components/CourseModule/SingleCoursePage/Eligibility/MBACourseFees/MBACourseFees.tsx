@@ -17,9 +17,9 @@ const MBACourseFees: React.FC<MBAFeesProps> = ({ fees }) => {
         MBA Course Fees in India
       </h1>
       <p className="mb-6 text-gray-600">
-        Before applying to their desired colleges, candidates must check out MBA
+        {`Before applying to their desired colleges, candidates must check out MBA
         fees in India so that they do not face any financial issues down the
-        road. Here's the MBA fee of top colleges in India:
+        road. Here's the MBA fee of top colleges in India:`}
       </p>
       <FeeTable fees={fees} />
     </div>
