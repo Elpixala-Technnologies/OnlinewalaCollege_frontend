@@ -39,8 +39,107 @@ function NewsPage() {
     },
   ];
 
+  const topSearches = [
+    {
+      name: 1,
+      content: "Neet Controvery 2024",
+    },
+    {
+      name: 2,
+      content: "Jossa round 1 cutoff 2024",
+    },
+    {
+      name: 3,
+      content: "Jossa round 2 cutoff 2024",
+    },
+    {
+      name: 4,
+      content: "Class 10th CBSE Results",
+    },
+    {
+      name: 5,
+      content: "ComeDK BArch Counselling 2024",
+    },
+  ];
+
   return (
     <div className="bg-[#EEF4FF]">
+
+<div className="bg-gradient-to-r from-[#7AA5FF] to-[#5A8EFA] xl:px-56 lg:px-20 px-2 overflow-auto flex text-center items-center justify-around h-16 ">
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"/latest-news/latest"}
+          >
+            Latest News
+          </Link>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"/latest-news/featured"}
+          >
+            Featured
+          </Link>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"/latest-news/exams"}
+          >
+            Exams
+          </Link>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"/latest-news/colleges"}
+          >
+            Colleges
+          </Link>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"/latest-news/schools"}
+          >
+            Schools
+          </Link>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"/latest-news/workplace"}
+          >
+            Workplace
+          </Link>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"/latest-news/opinions"}
+          >
+            Opinions
+          </Link>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"/latest-news/abroad"}
+          >
+            Study Abroad
+          </Link>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"/latest-news/policies"}
+          >
+            Policies
+          </Link>
+        </div>
+
+        <div className="m-10 rounded-2xl pt-6 px-5 pb-3 bg-white">
+            <h1 className="lg:text-2xl lg:font-bold text-lg font-semibold">
+              Top Searches
+            </h1>
+            <div className=" m-3 pb-2 flex lg:flex-wrap text-center items-center xl:justify-around lg:justify-start justify-start overflow-auto">
+              {topSearches.map((search) => {
+                return (
+                  <button
+                    className="border-2 border-[#6697FC] lg:py-2 rounded-full lg:px-6 lg:mx-4 lg:my-2 xl:m-0 mx-5 text-nowrap px-6 py-2 lg:text-base text-xs"
+                    key={search.name}
+                  >
+                    {search.content}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
       <div className="flex flex-wrap md:flex-nowrap">
         <div className=" md:w-full  mt-12 m-16 bg-white rounded-xl">
           <div>

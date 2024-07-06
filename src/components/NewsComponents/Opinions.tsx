@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import lady from "@/assets/images/lady.png";
+import Link from "next/link";
 function Opinions() {
   const array = [
     {
@@ -50,13 +51,14 @@ function Opinions() {
 
       <div className="lg:grid lg:grid-cols-2 lg:gap-4 p-1">
         {array.map((data) => (
-          <div key={data.id} className=" flex  lg:p-2 xl:p-4 m-5 lg:m-0">
+          <Link key={data.id} href={"/newsId"}>
+          <div  className=" flex  lg:p-2 xl:p-4 m-5 lg:m-0">
             <Image
               src={data.images}
               alt="image"
               
               className="rounded-lg lg:mr-5 mr-3 lg:aspect-square lg:w-16 xl:w-20 w-16 "
-            />
+              />
             <p className="font-medium lg:text-sm xl:text-lg text-[10px]">
               {data.content}
               <span className="text-[8px] mt-1 lg:mt-2 block text-slate-500">
@@ -64,6 +66,7 @@ function Opinions() {
               </span>
             </p>
           </div>
+              </Link>
         ))}
       </div>
     </div>
