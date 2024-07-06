@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import exam from "@/assets/images/exam.png";
 import exam2 from "@/assets/images/exam2.png";
+import Link from "next/link";
 
 function SchoolNews() {
 
@@ -35,6 +36,8 @@ function SchoolNews() {
       <p className="text-2xl font-bold">School News</p>
 
       <div className="lg:grid lg:gap-10 lg:grid-cols-2 mt-8">
+
+        <Link href={"/newsId"}>
         <div className=" relative mt-6">
           <Image src={exam} alt="image" className="rounded-xl aspect-square lg:aspect-auto "></Image>
           <div className="absolute bottom-0 rounded-lg w-full blur-sm bg-black bg-opacity-60 h-2/6 "></div>
@@ -45,6 +48,9 @@ function SchoolNews() {
             18 June, 2024
           </p>
         </div>
+        </Link>
+
+        <Link href={"/newsId"}>
         <div className=" relative mt-6">
           <Image src={exam} alt="image" className="rounded-xl aspect-square lg:aspect-auto "></Image>
           <div className="absolute bottom-0 rounded-lg w-full blur-sm bg-black bg-opacity-60 h-2/6 "></div>
@@ -55,6 +61,7 @@ function SchoolNews() {
             18 June, 2024
           </p>
         </div>
+        </Link>
 
         
       </div>
@@ -62,7 +69,8 @@ function SchoolNews() {
       <div className=" xl:m-14 lg:m-6 lg:grid lg:grid-cols-4  xl:gap-8 lg:gap-4 mt-6 ">
         {news.map( (news)=>{
           return(
-            <div key={news.id} className="xl:mr-5 mb-5 ">
+            <Link key={news.id} href={"/newsId"}>
+            <div  className="xl:mr-5 mb-5 ">
           <div>
             <Image src={news.image} alt="image" className="rounded-lg" />
           </div>
@@ -71,6 +79,7 @@ function SchoolNews() {
             <span className="xl:text-sm lg:text-xs block text-slate-500">June 18, 2024</span>
           </p>
         </div>
+        </Link>
           )
         } )}
       </div>
