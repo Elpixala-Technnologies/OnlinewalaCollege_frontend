@@ -23,9 +23,9 @@ const PopularCourses: React.FC = () => {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold text-center mb-4">Popular Courses</h1>
       <p className="text-center mb-8 max-w-2xl mx-auto">
-        We are here as a solution to improve people's competence in getting
+        {`We are here as a solution to improve people's competence in getting
         jobs, increasing income, and starting a professional business with
-        quality learning at affordable prices.
+        quality learning at affordable prices.`}
       </p>
       <div className="flex justify-center gap-5 overflow-x-auto overflow-scroll hide-scrollbar">
         {courses.map((course) => (
