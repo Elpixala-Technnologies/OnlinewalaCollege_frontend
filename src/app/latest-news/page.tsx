@@ -100,38 +100,66 @@ function NewsPage() {
     <>
       <div className="bg-slate-100 pb-20 ">
         <div className="bg-gradient-to-r from-[#7AA5FF] to-[#5A8EFA] xl:px-56 lg:px-20 px-2 overflow-auto flex text-center items-center justify-around h-16 ">
-          <Link className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5" href={""}>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"latest-news/latest"}
+          >
             Latest News
           </Link>
-          <Link className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5" href={""}>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"latest-news/featured"}
+          >
             Featured
           </Link>
-          <Link className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5" href={""}>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"latest-news/exams"}
+          >
             Exams
           </Link>
-          <Link className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5" href={""}>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"latest-news/colleges"}
+          >
             Colleges
           </Link>
-          <Link className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5" href={""}>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"latest-news/schools"}
+          >
             Schools
           </Link>
-          <Link className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5" href={""}>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"latest-news/workplace"}
+          >
             Workplace
           </Link>
-          <Link className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5" href={""}>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"latest-news/opinions"}
+          >
             Opinions
           </Link>
-          <Link className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5" href={""}>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"latest-news/abroad"}
+          >
             Study Abroad
           </Link>
-          <Link className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5" href={""}>
+          <Link
+            className=" text-white xl:text-lg lg:text-base text-xs xl:mx-0 lg:mx-0 mx-5"
+            href={"latest-news/policies"}
+          >
             Policies
           </Link>
         </div>
 
         <div className="m-10 rounded-2xl pt-6 px-5 pb-3 bg-white">
-
-          <h1 className="lg:text-2xl lg:font-bold text-lg font-semibold">Top Searches</h1>
+          <h1 className="lg:text-2xl lg:font-bold text-lg font-semibold">
+            Top Searches
+          </h1>
           <div className=" m-3 pb-2 flex lg:flex-wrap text-center items-center xl:justify-around lg:justify-start justify-start overflow-auto">
             {topSearches.map((search) => {
               return (
@@ -146,46 +174,45 @@ function NewsPage() {
           </div>
         </div>
 
-
-
         <div className="grid grid-cols-12  lg:mx-10 mx-4  gap-8">
-
           <div className=" rounded-xl col-span-12 lg:col-span-4 xl:col-span-3 h-[880px] lg:h-[800px] xl:h-[840px]   bg-white p-5">
             <p className="font-medium text-xl">Featured News</p>
 
             <div>
-              <div className="my-3">
-                <Image src={myImage} alt="image" />
-                <p className="font-medium my-3">
-                  `Rising demand for talents with cross disciplinary exposures`
-                </p>
-                <p className="text-sm text-slate-500">June 18,2024</p>
-              </div>
+              <Link href={"/newsId"}>
+                <div className="my-3">
+                  <Image src={myImage} alt="image" />
+                  <p className="font-medium my-3">
+                    `Rising demand for talents with cross disciplinary
+                    exposures`
+                  </p>
+                  <p className="text-sm text-slate-500">June 18,2024</p>
+                </div>
+              </Link>
             </div>
 
             <div>
               {sideBarLeft.map((item) => {
                 return (
-                  <div
-                    key={item.id}
-                    className="grid grid-cols-4 my-8 items-center"
-                  >
-                    <div className="col-span-1">
-                      <Image
-                        src={item.image}
-                        alt="image"
-                        height={75}
-                        width={75}
-                        className="rounded-lg"
-                      />
+                  <Link key={item.id} href={"/newsId"}>
+                    <div className="grid grid-cols-4 my-8 items-center">
+                      <div className="col-span-1">
+                        <Image
+                          src={item.image}
+                          alt="image"
+                          height={75}
+                          width={75}
+                          className="rounded-lg"
+                        />
+                      </div>
+                      <p className="ml-4 col-span-3 font-medium lg:text-sm ">
+                        {item.content}
+                        <span className="text-xs block text-slate-500">
+                          June 18, 2024
+                        </span>
+                      </p>
                     </div>
-                    <p className="ml-4 col-span-3 font-medium lg:text-sm ">
-                      {item.content}
-                      <span className="text-xs block text-slate-500">
-                        June 18, 2024
-                      </span>
-                    </p>
-                  </div>
+                  </Link>
                 );
               })}
             </div>
@@ -214,22 +241,40 @@ function NewsPage() {
           </div>
 
           <div className="  col-span-12 lg:col-span-4 xl:col-span-6 ">
-            <NewsComponent image1={classroom} image2={office} name="Recent News" />
-            <NewsComponent image1={collegeGate} image2={girl}  name="College News"/>
-            <NewsComponent image1={study1} image2={study2}  name="College Entrance News"/>
-            <NewsComponent image1={army1} image2={army2}  name="Recruitment News"/>
+            <NewsComponent
+              image1={classroom}
+              image2={office}
+              name="Recent News"
+            />
+            <NewsComponent
+              image1={collegeGate}
+              image2={girl}
+              name="College News"
+            />
+            <NewsComponent
+              image1={study1}
+              image2={study2}
+              name="College Entrance News"
+            />
+            <NewsComponent
+              image1={army1}
+              image2={army2}
+              name="Recruitment News"
+            />
           </div>
 
           <div className=" mb-10 rounded-xl col-span-12 lg:col-span-4 xl:col-span-3 h-[680px] lg:h-[720px] xl:h-[680px] bg-white p-5">
             <p className="font-medium text-xl mb-10">Latest News</p>
             {sideBarRight.map((item) => {
               return (
-                <div className="mb-8" key={item.id}>
-                  <p className="mb-2 font-semibold text-sm">{item.content}</p>
-                  <span className="text-xs block text-slate-500">
-                    June 18, 2024
-                  </span>
-                </div>
+                <Link key={item.id} href={"/newsId"}>
+                  <div className="mb-8">
+                    <p className="mb-2 font-semibold text-sm">{item.content}</p>
+                    <span className="text-xs block text-slate-500">
+                      June 18, 2024
+                    </span>
+                  </div>
+                </Link>
               );
             })}
             <hr className="border-[#6697FC]" />
@@ -255,15 +300,13 @@ function NewsPage() {
             </div>
           </div>
         </div>
-        
+
         <SchoolNews />
         <Policies />
-        <StudyAbroad/>
-        <Opinions/>        
-        <AskAnything/>
+        <StudyAbroad />
+        <Opinions />
+        <AskAnything />
       </div>
-
-
     </>
   );
 }
