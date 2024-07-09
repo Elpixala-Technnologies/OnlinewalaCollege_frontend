@@ -8,7 +8,7 @@ function AppliedColleges() {
       <div className=" p-8 rounded-lg w-full">
         <h1 className="text-2xl font-bold mb-4">Your Applied colleges</h1>
         <p className="text-gray-600 mb-6 text-center">
-          Nothing to show yet. You haven't applied to any colleges.
+          {` Nothing to show yet. You haven't applied to any colleges.`}
         </p>
 
         <div className="relative mb-6">
