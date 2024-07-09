@@ -23,7 +23,7 @@ function Navbar() {
   const getLinkClassName = (href: any) => {
     const baseClasses =
       "block lg:inline-block px-2 py-[7px] rounded xl:text-[18px]";
-    const activeClasses = "bg-blue-600 text-white";
+    const activeClasses = "bg-[#6698FC] text-white";
     return `${baseClasses} ${pathname === href ? activeClasses : ""}`;
   };
 
@@ -58,7 +58,7 @@ function Navbar() {
 
         {/* Menu items */}
         <div
-          className={`lg:flex xl:gap-10 gap-4 lg:items-center absolute lg:static left-0 top-[102px] w-64 z-50 lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none transition-all duration-300 ease-in-out transform ${
+          className={`lg:flex xl:gap-6 gap-4 lg:items-center absolute lg:static left-0 top-[102px] w-64 z-50 lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none transition-all duration-300 ease-in-out transform ${
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           } lg:translate-x-0`}
         >
