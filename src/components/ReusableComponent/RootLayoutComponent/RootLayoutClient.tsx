@@ -16,8 +16,10 @@ export default function RootLayoutClient({
     <>
       {!isRootRoute && <Navbar />}
       {children}
-      <div className="sm:p-0 p-4 mt-32 bg-gradient-to-b from-[#6697FC] to-[#6697FC]">
-        <Footer />
+      <div className="mt-32">
+        <div className="sm:p-0 p-4  bg-gradient-to-b from-[#6697FC] to-[#6697FC]">
+          <Footer />
+        </div>
       </div>
     </>
   );

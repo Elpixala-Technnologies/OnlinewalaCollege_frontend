@@ -6,14 +6,14 @@ import React from "react";
 function page() {
   return (
     <div>
-      <div className="mt-12 max-w-[1450px] mx-auto p-4">
+      <div className="mt-12 max-w-[1500px] mx-auto p-4">
         <TopAll />
       </div>
-      <div className="mt-12 max-w-[1450px] mx-auto p-2">
+      <div className="mt-12 max-w-[1500px] mx-auto p-2">
         <CollegeCard />
       </div>
       <hr />
-      <div className="mt-12 max-w-[1450px] mx-auto p-5">
+      <div className="mt-12 max-w-[1500px] mx-auto p-5">
         <MainCollegeSection />
       </div>
     </div>
